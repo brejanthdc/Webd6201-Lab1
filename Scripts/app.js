@@ -1,3 +1,7 @@
+//Name: Brejanth Rajendran
+//StudentId: 100557484
+//Date: 2020/01/23
+
 "use strict";
 (function (){
     //2(a):
@@ -27,5 +31,19 @@
     //Insert NewLink before contact us link 
     Contactlink.parentNode.insertBefore(NewLink,Contactlink);
     
+    //Creates a var that holds main navbar
+    let Navbar = document.getElementsByTagName("nav")[0];
+    //Creates a new nav bar and stores it inside of bottomNav
+    let BottomNav = document.createElement("nav");
 
-})();    
+    // this creates the current year but I don't know how to insert it into html tag
+    //let CurrentYear = new Date().getFullYear();
+    //console.log(CurrentYear);
+
+    //Adds html code to the newly created nav bar, and in this case it is a bottom nav bar
+    BottomNav.innerHTML = '<nav class="navbar fixed-bottom navbar-light bg-light"> <a class="navbar-brand" href="#">&copy CopyRight 2020 </a></nav>';
+    
+
+    //Inserts the new navbar before old one
+    Navbar.parentNode.insertBefore(BottomNav,Navbar);
+    })();    
